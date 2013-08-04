@@ -64,7 +64,7 @@ function expanddir(dir) {
 // 
 function expandfiles(dir, ext, encoding) {
 	
-	if(arguments.length < 3) encoding = 'utf-8';
+	if(encoding === void(0)) encoding = 'utf-8';
 	
 	return expanddir(dir)
 		.whereFile(ext)
@@ -146,7 +146,7 @@ function readdir(dir) {
 // 
 function readfile(path, encoding) {
 	
-	if(arguments.length < 2) encoding = 'utf-8';
+	if(encoding === void(0)) encoding = 'utf-8';
 	
 	return Rx.Observable.create(function(observer) {
 		
@@ -169,7 +169,7 @@ function readfile(path, encoding) {
 // 
 function readfiles(dir, ext, encoding) {
 	
-	if(arguments.length < 3) encoding = 'utf-8';
+	if(encoding === void(0)) encoding = 'utf-8';
 	
 	return readdir(dir)
 		.whereFile(ext)
@@ -330,7 +330,7 @@ observableProto.unlink = function() {
 // 
 observableProto.readfile = function(encoding) {
 	
-	if(arguments.length == 0) encoding = 'utf-8';
+	if(encoding === void(0)) encoding = 'utf-8';
 	
 	return this.selectMany(_.partialRight(readfile, encoding));
 };
@@ -340,7 +340,7 @@ observableProto.readfile = function(encoding) {
 // 
 observableProto.readfiles = function(encoding) {
 	
-	if(arguments.length == 0) encoding = 'utf-8';
+	if(encoding === void(0)) encoding = 'utf-8';
 	
 	return this.selectMany(_.partialRight(readfiles, encoding));
 };
@@ -355,7 +355,7 @@ observableProto.rmdir = function() {
 // and data from the filename and data selectors.
 // 
 observableProto.writeFiles = function(pathSelector, dataSelector) {
-	if(arguments.length < 2) dataSelector = i;
+	if(dataSelector === void(0)) dataSelector = i;
 	
 	return this.selectMany(function(x) {
 		var path = pathSelector(x);
