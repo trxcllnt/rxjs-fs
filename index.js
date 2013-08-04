@@ -150,7 +150,7 @@ function readfile(path, encoding) {
 	
 	return Rx.Observable.create(function(observer) {
 		
-		fs.readfile(path, encoding, cb);
+		fs.readFile(path, encoding, cb);
 		
 		function cb(e, file) {
 			if(e) return observer.onError(e);

@@ -1,6 +1,6 @@
 {
   "name": "rxjs-fs",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "RxJS wrappers around some of the node fs lib.",
   "main": "index.js",
   "scripts": {
