@@ -365,7 +365,7 @@ observableProto.writeFiles = function(pathSelector, dataSelector) {
 	});
 }
 
-module.exports = {
+Rx.fs = {
 	cleardir: cleardir,
 	expanddir: expanddir,
 	expandfiles: expandfiles,
@@ -382,3 +382,5 @@ module.exports = {
 	unlinkdir: unlinkdir,
 	writeFile: writeFile
 };
+
+module.exports = Rx;
