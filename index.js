@@ -290,7 +290,7 @@ function writeFile(path, file) {
 		}
 	});
 	
-	return makeDirsObs.concat(writeFileObs);
+	return makeDirsObs.ignoreElements().concat(writeFileObs);
 };
 
 // 
