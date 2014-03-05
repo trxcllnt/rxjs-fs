@@ -2,6 +2,7 @@
 var Rx = require('rx');
 var _ = require('lodash');
 var fs = require('fs');
+var Path = require('path');
 
 var Observable = Rx.Observable;
 var observableProto = Observable.prototype;
@@ -16,13 +17,12 @@ function setFullPath(a, b) { return a + '/' + b; }
 
 function getFilenameMetaData(path) {
 	
-	var slash = Math.max(path.lastIndexOf('/'), 0),
-		dot = path.lastIndexOf('.');
+	var extension = Path.extname(path);
 	
 	return {
-		extension: path.substring(dot),
-		name:      path.substring(slash, dot),
-		location:  path.substring(0, slash),
+		extension: Path.extname(path),
+		name:      Path.basename(path, extension),
+		location:  Path.dirname(path),
 		path:      path
 	}
 };
@@ -52,9 +52,6 @@ function expanddir(dir) {
 		})
 		.where(function(x) {
 			return x.stat;
-		})
-		.select(function(x) {
-			return x.stat.isFile() ? getFilenameMetaData(x.path) : x;
 		});
 };
 
