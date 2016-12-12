@@ -26,6 +26,13 @@ class FileSystem extends Observable {
         return FileSystem.of({ path }).dir(options);
     }
     /**
+    * Asynchronously emits the contents of each file in a directory.
+    * @returns FileSystem<{ String path }>
+    **/
+    static files(path = './', options) {
+        return FileSystem.dir(path, options).file(options);
+    }
+    /**
     * Asynchronously emits the contents of a directory and all subdirectories.
     * @returns FileSystem<{ String path }>
     **/

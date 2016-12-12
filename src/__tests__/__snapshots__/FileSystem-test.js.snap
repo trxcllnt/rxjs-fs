@@ -1,0 +1,59 @@
+exports[`FileSystem should create many files in the test files directory 1`] = `"/Users/ptaylor/dev/rxjs-fs/src/__tests__/test-files/test-file-1"`;
+
+exports[`FileSystem should create many files in the test files directory 2`] = `"test-contents-1"`;
+
+exports[`FileSystem should create many files in the test files directory 3`] = `"/Users/ptaylor/dev/rxjs-fs/src/__tests__/test-files/test-file-2"`;
+
+exports[`FileSystem should create many files in the test files directory 4`] = `"test-contents-2"`;
+
+exports[`FileSystem should create many files in the test files directory 5`] = `"/Users/ptaylor/dev/rxjs-fs/src/__tests__/test-files/test-file-3"`;
+
+exports[`FileSystem should create many files in the test files directory 6`] = `"test-contents-3"`;
+
+exports[`FileSystem should create many files in the test files directory 7`] = `"/Users/ptaylor/dev/rxjs-fs/src/__tests__/test-files/test-file-4"`;
+
+exports[`FileSystem should create many files in the test files directory 8`] = `"test-contents-4"`;
+
+exports[`FileSystem should create many files in the test files directory 9`] = `"/Users/ptaylor/dev/rxjs-fs/src/__tests__/test-files/test-file-5"`;
+
+exports[`FileSystem should create many files in the test files directory 10`] = `"test-contents-5"`;
+
+exports[`FileSystem should create many files in the test files directory 11`] = `"/Users/ptaylor/dev/rxjs-fs/src/__tests__/test-files/test-file-6"`;
+
+exports[`FileSystem should create many files in the test files directory 12`] = `"test-contents-6"`;
+
+exports[`FileSystem should create many files in the test files directory 13`] = `"/Users/ptaylor/dev/rxjs-fs/src/__tests__/test-files/test-file-7"`;
+
+exports[`FileSystem should create many files in the test files directory 14`] = `"test-contents-7"`;
+
+exports[`FileSystem should create many files in the test files directory 15`] = `"/Users/ptaylor/dev/rxjs-fs/src/__tests__/test-files/test-file-8"`;
+
+exports[`FileSystem should create many files in the test files directory 16`] = `"test-contents-8"`;
+
+exports[`FileSystem should create many files in the test files directory 17`] = `"/Users/ptaylor/dev/rxjs-fs/src/__tests__/test-files/test-file-9"`;
+
+exports[`FileSystem should create many files in the test files directory 18`] = `"test-contents-9"`;
+
+exports[`FileSystem should create many files in the test files directory 19`] = `"/Users/ptaylor/dev/rxjs-fs/src/__tests__/test-files/test-file-10"`;
+
+exports[`FileSystem should create many files in the test files directory 20`] = `"test-contents-10"`;
+
+exports[`FileSystem should remove many files in the test files directory 1`] = `"/Users/ptaylor/dev/rxjs-fs/src/__tests__/test-files/test-file-1"`;
+
+exports[`FileSystem should remove many files in the test files directory 2`] = `"/Users/ptaylor/dev/rxjs-fs/src/__tests__/test-files/test-file-2"`;
+
+exports[`FileSystem should remove many files in the test files directory 3`] = `"/Users/ptaylor/dev/rxjs-fs/src/__tests__/test-files/test-file-3"`;
+
+exports[`FileSystem should remove many files in the test files directory 4`] = `"/Users/ptaylor/dev/rxjs-fs/src/__tests__/test-files/test-file-4"`;
+
+exports[`FileSystem should remove many files in the test files directory 5`] = `"/Users/ptaylor/dev/rxjs-fs/src/__tests__/test-files/test-file-5"`;
+
+exports[`FileSystem should remove many files in the test files directory 6`] = `"/Users/ptaylor/dev/rxjs-fs/src/__tests__/test-files/test-file-6"`;
+
+exports[`FileSystem should remove many files in the test files directory 7`] = `"/Users/ptaylor/dev/rxjs-fs/src/__tests__/test-files/test-file-7"`;
+
+exports[`FileSystem should remove many files in the test files directory 8`] = `"/Users/ptaylor/dev/rxjs-fs/src/__tests__/test-files/test-file-8"`;
+
+exports[`FileSystem should remove many files in the test files directory 9`] = `"/Users/ptaylor/dev/rxjs-fs/src/__tests__/test-files/test-file-9"`;
+
+exports[`FileSystem should remove many files in the test files directory 10`] = `"/Users/ptaylor/dev/rxjs-fs/src/__tests__/test-files/test-file-10"`;

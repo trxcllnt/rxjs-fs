@@ -38,6 +38,24 @@ describe('FileSystem', () => {
             })
             .toPromise();
     });
+    it('should create many files in the test files directory', () => {
+        return FileSystem
+            .range(1, 10)
+            .concatMap((value) => FileSystem
+                .writeFile(
+                    `${filePath}-${value}`,
+                    `${fileContents}-${value}`,
+                    () => ({ path: `${filePath}-${value}` })
+                )
+                .file()
+                .do(({ path, file, stats }) => {
+                    expect(path).toMatchSnapshot();
+                    expect(stats.isFile()).toBe(true);
+                    expect(file.toString()).toMatchSnapshot();
+                })
+            )
+            .toPromise();
+    });
     it('should remove a file in the test files directory', () => {
         return FileSystem
             .unlink(`${filePath}-0`, () => `${filePath}-0`)
@@ -48,6 +66,25 @@ describe('FileSystem', () => {
             .do(({ unlinkedFilePath, exists }) => {
                 expect(exists).toBe(false);
                 expect(unlinkedFilePath).toBe(`${filePath}-0`);
+            })
+            .toPromise();
+    });
+    it('should remove many files in the test files directory', () => {
+        return FileSystem
+            .range(1, 10)
+            .concatMap((value) => FileSystem
+                .unlink(
+                    `${filePath}-${value}`,
+                    () => `${filePath}-${value}`
+                )
+                .mergeMap(
+                    (unlinkedFilePath) => FileSystem.exists(unlinkedFilePath, (x) => !!x),
+                    (unlinkedFilePath, exists) => ({ unlinkedFilePath, exists })
+                )
+            )
+            .do(({ unlinkedFilePath, exists }) => {
+                expect(exists).toBe(false);
+                expect(unlinkedFilePath).toMatchSnapshot();
             })
             .toPromise();
     });
