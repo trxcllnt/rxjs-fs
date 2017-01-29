@@ -7,6 +7,7 @@
   "scripts": {
     "test": "jest",
     "test-coverage": "jest --coverage",
+    "debug": "node --debug-brk --inspect ./node_modules/.bin/jest -i --env jest-environment-node-debug",
     "clean": "rimraf lib && mkdirp lib",
     "prepublish": "npm test && npm run build",
     "build": "npm run clean && babel src -d lib --source-maps",
@@ -17,14 +18,8 @@
     "url": "git@github.com:trxcllnt/rxjs-fs.git"
   },
   "dependencies": {
-    "babel-cli": "~6.18.0",
-    "babel-jest": "~17.0.2",
-    "babel-plugin-transform-runtime": "~6.15.0",
-    "babel-polyfill": "~6.20.0",
-    "babel-preset-es2015": "~6.18.0",
-    "jest": "~17.0.3",
-    "rxjs": "~5.0.0-rc.5",
-    "symbol-observable": "~1.0.4"
+    "rxjs": "^5.0.3",
+    "symbol-observable": "^1.0.4"
   },
   "files": [
     "lib",
@@ -48,13 +43,15 @@
     ]
   },
   "devDependencies": {
-    "babel-cli": "~6.16.0",
-    "babel-jest": "~16.0.0",
-    "babel-polyfill": "~6.16.0",
-    "babel-preset-es2015": "~6.16.0",
-    "babel-preset-stage-0": "~6.16.0",
-    "cross-env": "~3.1.3",
-    "jest": "~16.0.1",
+    "babel-cli": "~6.22.2",
+    "babel-jest": "~18.0.0",
+    "babel-plugin-transform-runtime": "~6.22.0",
+    "babel-polyfill": "~6.22.0",
+    "babel-preset-es2015": "~6.22.0",
+    "babel-preset-stage-0": "~6.22.0",
+    "cross-env": "~3.1.4",
+    "jest": "~18.1.0",
+    "jest-environment-node-debug": "0.0.2",
     "mkdirp": "~0.5.1",
     "rimraf": "~2.5.4"
   }
